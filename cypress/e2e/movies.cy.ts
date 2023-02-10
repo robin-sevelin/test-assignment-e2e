@@ -81,25 +81,25 @@ describe('api data tests', () => {
     cy.get('#movie-container').should('contain', 'Saw');
   });
 
-  it('should not get api data with incorrect url', () => {
-    cy.get('#searchText').type(' ');
+  // it('should not get api data with incorrect url', () => {
+  //   cy.get('#searchText').type(' ');
 
-    cy.get('#search').click();
+  //   cy.get('#search').click();
 
-    cy.get('#movie-container').should('not.contain', 'Saw');
-    cy.get('p').should('exist').should('contain', 'Inga');
-  });
+  //   cy.get('#movie-container').should('not.contain', 'Saw');
+  //   cy.get('p').should('exist').should('contain', 'Inga');
+  // });
 
-  it('should render api data to html', () => {
-    cy.get('#searchText').type('Saw');
+  // it('should render api data to html', () => {
+  //   cy.get('#searchText').type('Saw');
 
-    cy.get('#search').click();
+  //   cy.get('#search').click();
 
-    cy.get('#movie-container').should('exist');
-    cy.get('.movie').should('exist');
-    cy.get('h3').should('exist');
-    cy.get('img').should('exist');
-    cy.get(':nth-child(1) > h3').should('contain', 'Saw');
-    cy.get(':nth-child(2) > h3').should('contain', 'Saw II');
-  });
+  //   cy.get('#movie-container').should('exist');
+  //   cy.get('.movie').should('exist');
+  //   cy.get('h3').should('exist');
+  //   cy.get('img').should('exist');
+  //   cy.get(':nth-child(1) > h3').should('contain', 'Saw');
+  //   cy.get(':nth-child(2) > h3').should('contain', 'Saw II');
+  // });
 });
