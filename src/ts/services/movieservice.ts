@@ -13,3 +13,5 @@ export const getData = async (searchText: string): Promise<IMovie[]> => {
       return [];
     });
 };
+
+// new api key bfb0ae8e
